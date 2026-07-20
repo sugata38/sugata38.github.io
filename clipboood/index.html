@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clipboood - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #a78bfa;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        ul {
+            margin: 0 0 1rem 1.5rem;
+            color: #ccc;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: #151515;
+            border: 1px solid #252525;
+            border-radius: 12px;
+            padding: 1.2rem;
+        }
+
+        .feature-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 0;
+        }
+
+        .faq-item {
+            background: #151515;
+            border: 1px solid #252525;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #1a1a3e, #1a1a2e);
+            border: 1px solid #2a2a4e;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-box a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .links {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #222;
+        }
+
+        .links a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* 言語切り替えリンク */
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        .lang-switch a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid #60a5fa;
+            border-radius: 6px;
+        }
+
+        .lang-switch a:hover {
+            background: #60a5fa;
+            color: #0a0a0a;
+        }
+
+        /* 言語セクションの区切り線 */
+        .lang-divider {
+            margin: 3rem 0;
+            border: none;
+            border-top: 2px solid #a78bfa;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 480px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 言語切り替えリンク -->
+        <div class="lang-switch">
+            <a href="#japanese">日本語</a>
+            <a href="#english">English</a>
+        </div>
+
+        <!-- ===== 日本語セクション ===== -->
+        <div id="japanese">
+            <h1>clipboood</h1>
+            <p class="tagline">クリップボード履歴をシンプルに管理</p>
+
+            <h2>主な機能</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📋</div>
+                    <h3>自動保存</h3>
+                    <p>コピーしたテキストを自動的に履歴に保存。最大30件まで保持します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">👆</div>
+                    <h3>ワンタップコピー</h3>
+                    <p>履歴のテキストをタップするだけで再度コピーできます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🖼️</div>
+                    <h3>自動バックグラウンド保存</h3>
+                    <p>PiP機能を活用して、アプリを閉じても自動保存を継続。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>プライバシー重視</h3>
+                    <p>クリップボード履歴はローカルのみに保存。履歴テキストデータが外部送信されることはありません。</p>
+                </div>
+            </div>
+
+            <h2>よくある質問</h2>
+            <div class="faq-item">
+                <h3>Q. アプリを閉じても履歴は残りますか？</h3>
+                <p>はい。履歴はデバイスに保存されるため、アプリを閉じても消えません。アプリを削除すると履歴も削除されます。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 広告を非表示にすることはできますか？</h3>
+                <p>はい。アプリ内の設定画面よりプレミアムプラン（広告非表示アドオン）をご購入いただくことで、広告を完全に非表示にすることができます。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. どのようなデータが外部に送信されますか？</h3>
+                <p>クリップボードに保存されたテキストデータが外部に送信されることは一切ありません。ただし、アプリ内課金処理（StoreKit）、品質向上（クラッシュレポートや匿名の利用統計データ）、および広告表示の最適化のために、個人を特定しない匿名の統計データが一部外部サービス（Apple, Google AdMob, Firebase）に送信されることがあります。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 自動保存（PiPウィンドウ）の使い方は？</h3>
+                <p>コントロールセンターに追加した「クリップボード自動保存」ボタンをタップすると、小さなPiPウィンドウが立ち上がり、アプリがバックグラウンドにいてもテキストのコピー履歴を自動保存し続けます。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q.「○○がペーストされました」通知が出ます</h3>
+                <p>設定アプリの「clipboood」＞「他のAppからペースト」を「許可」にすると通知ダイアログが出なくなり、より快適に自動保存が利用できます。クリップボード履歴データが外部に送信されることはありません。</p>
+            </div>
+
+            <h2>お問い合わせ</h2>
+            <div class="contact-box">
+                <p>ご質問・ご要望・不具合報告などがございましたら、以下のメールアドレスまでお気軽にご連絡ください。</p>
+                <p>📧 <a href="mailto:masaru.n.m2026@gmail.com">masaru.n.m2026@gmail.com</a></p>
+            </div>
+
+            <div class="links">
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+            </div>
+        </div>
+
+        <!-- ===== 区切り線 ===== -->
+        <hr class="lang-divider">
+
+        <!-- ===== English Section ===== -->
+        <div id="english">
+            <h1>clipboood</h1>
+            <p class="tagline">Simple clipboard history manager</p>
+
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📋</div>
+                    <h3>Auto Save</h3>
+                    <p>Automatically saves copied text to history. Keeps up to 30 items.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">👆</div>
+                    <h3>One-Tap Copy</h3>
+                    <p>Simply tap any item in your history to copy it again.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🖼️</div>
+                    <h3>Background Auto Save</h3>
+                    <p>Uses PiP (Picture in Picture) to continue saving even when the app is closed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Clipboard history is stored locally. The clipboard text data is never sent to external servers.</p>
+                </div>
+            </div>
+
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <h3>Q. Will my history be kept after closing the app?</h3>
+                <p>Yes. Your history is saved on your device and will not be lost when you close the app. However, uninstalling the app will also delete all history.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. Can I remove the advertisements?</h3>
+                <p>Yes, you can purchase the Premium Plan (Ad-Free Add-on) from the app's settings menu to completely remove all advertisements.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. Is any data sent to external servers?</h3>
+                <p>Clipboard text data is never sent to external servers. However, anonymous statistics for app analytics, crash reporting, and ad optimization may be shared with external services (Apple, Google AdMob, Firebase).</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. How does auto save (PiP window) work?</h3>
+                <p>Tap the "Auto Save Clipboard" button in Control Center. A small PiP window will appear, and the app will continue saving your clipboard history even in the background.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. I keep seeing a "pasted" notification</h3>
+                <p>Go to Settings > clipboood > "Paste from Other Apps" and select "Allow". This will prevent the paste confirmation dialog. Clipboard text data is never sent to external servers.</p>
+            </div>
+
+            <h2>Contact</h2>
+            <div class="contact-box">
+                <p>If you have any questions, feature requests, or bug reports, please feel free to contact us at:</p>
+                <p>📧 <a href="mailto:masaru.n.m2026@gmail.com">masaru.n.m2026@gmail.com</a></p>
+            </div>
+
+            <div class="links">
+                <a href="privacy-policy.html#english">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 clipboood. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>
