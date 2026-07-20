@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Legal Documents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .app-section {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .app-section h2 {
+            font-size: 1.3rem;
+            color: #FFD940;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .links a {
+            display: block;
+            padding: 0.8rem 1rem;
+            background: #222;
+            border-radius: 8px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .links a:hover {
+            background: #2a2a2a;
+            border-color: #FFD940;
+            color: #FFD940;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>App Legal Documents</h1>
+
+        <!-- 宿題おしえて -->
+        <div class="app-section">
+            <h2>宿題おしえて (ShukudaiOshiete)</h2>
+            <div class="links">
+                <a href="shukudai-oshiete/privacy-policy.html">プライバシーポリシー / Privacy Policy</a>
+                <a href="shukudai-oshiete/terms.html">利用規約 / Terms of Service</a>
+            </div>
+        </div>
+
+        <!-- clipboood -->
+        <div class="app-section">
+            <h2>clipboood</h2>
+            <div class="links">
+                <a href="clipboood/privacy-policy.html">プライバシーポリシー / Privacy Policy</a>
+            </div>
+        </div>
+
+        <!-- ZoneCoach -->
+        <div class="app-section">
+            <h2>ZoneCoach</h2>
+            <div class="links">
+                <a href="zonecoach-app/privacy-policy.html">プライバシーポリシー (日本語) / Privacy Policy (Japanese)</a>
+                <a href="zonecoach-app/privacy-policy-en.html">Privacy Policy (English)</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 App Developer
+        </div>
+    </div>
+</body>
+
+</html>
