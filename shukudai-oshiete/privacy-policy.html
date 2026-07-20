@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宿題おしえて - プライバシーポリシー</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FFD940, #80C780);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .app-name {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .updated {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #FFD940;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        ul {
+            margin: 0 0 1rem 1.5rem;
+            color: #ccc;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        .lang-switch a {
+            color: #FFD940;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid #FFD940;
+            border-radius: 6px;
+        }
+
+        .lang-switch a:hover {
+            background: #FFD940;
+            color: #0a0a0a;
+        }
+
+        .lang-divider {
+            margin: 3rem 0;
+            border: none;
+            border-top: 2px solid #80C780;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 言語切り替えリンク -->
+        <div class="lang-switch">
+            <a href="#pp-japanese">日本語</a>
+            <a href="#pp-english">English</a>
+        </div>
+
+        <!-- ===== 日本語セクション ===== -->
+        <div id="pp-japanese">
+            <h1>プライバシーポリシー</h1>
+            <p class="app-name">宿題おしえて</p>
+            <p class="updated">最終更新日: 2026年7月20日</p>
+
+            <h2>はじめに</h2>
+            <p>宿題おしえて（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーは、本アプリにおけるデータの取り扱いについて説明します。</p>
+            <p>本アプリは、保護者が子供の宿題を教える際のサポートツールとして設計されています。</p>
+
+            <h2>収集・利用するデータ</h2>
+            <p>本アプリは、不要な個人情報の収集は行いません。ただし、アプリの機能提供、品質向上、および広告配信のために以下のデータを一時的またはデバイス内に保存・送信する場合があります。</p>
+            <ul>
+                <li><strong>宿題の画像データおよび学年設定：</strong>撮影した宿題の写真および設定された学年情報は、AI（Gemini API）による教え方ガイドを生成するためにAPIサーバー（shukudai-api.vercel.app）へ一時的に送信されます。送信されたデータはAI処理完了後に即時破棄され、サーバー上に保存されたり、モデルの学習に利用されたりすることはありません。</li>
+                <li><strong>デバイス識別子（IDFV）：</strong>サービスの安定運用（APIのレート制限管理）のため、Appleが提供するベンダー識別子（identifierForVendor）をリクエストヘッダーに含めて送信します。この識別子から個人を特定することはできません。</li>
+                <li><strong>利用履歴：</strong>過去の質問履歴および設定された学年情報は、お使いのデバイス内（ローカル）に保存されます。</li>
+                <li><strong>アプリ内課金（StoreKit）：</strong>プレミアムプランの購入処理および復元のために、Appleが提供するStoreKitを使用します。決済処理はすべてAppleを通じて安全に行われ、開発者がクレジットカード情報などの個人決済情報を収集・保持することはありません。</li>
+                <li><strong>広告配信（Google AdMob）：</strong>無料版において広告を表示するためにGoogle AdMobを使用しています。広告表示および最適化のために、匿名化された識別子やデバイス情報が利用される場合があります。</li>
+            </ul>
+
+            <h2>AI（人工知能）の利用について</h2>
+            <p>本アプリは、Google が提供する Gemini API を利用して、宿題の画像から教え方ガイドを生成しています。</p>
+            <ul>
+                <li>撮影した宿題の画像および学年情報は、教え方ガイドの生成のために Google のサーバーに一時的に送信されます。</li>
+                <li>送信されたデータは、回答生成の目的にのみ使用され、Google によるモデルのトレーニングには使用されません（API 利用規約に準拠）。</li>
+                <li>画像データはサーバー上に永続的に保存されません。</li>
+            </ul>
+
+            <h2>データの保存</h2>
+            <p>学年設定および質問履歴は、デバイスのローカルストレージに保存されます。アプリを削除すると、すべてのデータも一緒に削除されます。</p>
+
+            <h2>第三者への提供および外部サービス</h2>
+            <p>本アプリは、上記の AI 処理および広告・決済インフラを除き、ユーザーのデータを第三者に提供、販売、共有することは一切ありません。本アプリで利用している外部サービスプロバイダのプライバシーポリシーは、以下よりご確認いただけます。</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: #FFD940; text-decoration: none;">Google プライバシーポリシー（AdMob / Gemini API）</a></li>
+                <li><a href="https://www.apple.com/legal/privacy/jp/" target="_blank" rel="noopener noreferrer" style="color: #FFD940; text-decoration: none;">Apple プライバシーポリシー（StoreKit）</a></li>
+            </ul>
+
+            <h2>お子様のプライバシー</h2>
+            <p>本アプリは保護者向けのアプリケーションです。お子様が直接使用することを想定していませんが、お子様の宿題の画像を扱うため、お子様の個人情報（名前、学校名など）が画像に含まれないようご注意ください。</p>
+
+            <h2>プライバシーポリシーの変更</h2>
+            <p>本プライバシーポリシーは、必要に応じて更新されることがあります。変更があった場合は、本ページにて通知します。</p>
+
+            <h2>お問い合わせ</h2>
+            <p>本プライバシーポリシーに関するご質問やご意見がございましたら、以下のメールアドレスまでお問い合わせください。</p>
+            <p>Email: <a href="mailto:masaru.n.m2026@gmail.com" style="color: #FFD940; text-decoration: none;">masaru.n.m2026@gmail.com</a></p>
+        </div>
+
+        <!-- ===== 区切り線 ===== -->
+        <hr class="lang-divider">
+
+        <!-- ===== English Section ===== -->
+        <div id="pp-english">
+            <h1>Privacy Policy</h1>
+            <p class="app-name">Shukudai Oshiete (Homework Helper)</p>
+            <p class="updated">Last updated: July 20, 2026</p>
+
+            <h2>Introduction</h2>
+            <p>Shukudai Oshiete ("the App") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how the App handles your data.</p>
+            <p>The App is designed as a support tool for parents to help teach their children's homework.</p>
+
+            <h2>Data Collection and Usage</h2>
+            <p>The App respects your privacy. While we do not collect personal information, we use third-party services and temporary transmissions to provide app functionality, manage usage, and deliver advertisements.</p>
+            <ul>
+                <li><strong>Homework Images and Grade Levels:</strong> Photos of homework and configured grade levels are transmitted to our API server (shukudai-api.vercel.app) to generate teaching guides via Gemini API. These data are discarded immediately after processing and are never stored on the server or used for training models.</li>
+                <li><strong>Device Identifier (IDFV):</strong> A device-specific identifier (identifierForVendor) is transmitted in the request header to enforce rate limits and ensure stable service. This identifier cannot identify individuals.</li>
+                <li><strong>Usage History:</strong> Past question history and configured grade levels are stored on your device (locally).</li>
+                <li><strong>In-App Purchases (StoreKit):</strong> We use Apple's StoreKit to process and restore premium plan purchases. All transactions are securely processed by Apple. The developer does not collect or store any payment information.</li>
+                <li><strong>Advertisements (Google AdMob):</strong> We use Google AdMob to display advertisements in the free version. Anonymous identifiers and device information may be used to display and optimize advertisements.</li>
+            </ul>
+
+            <h2>Use of AI (Artificial Intelligence)</h2>
+            <p>The App uses Google's Gemini API to generate teaching guides from homework images.</p>
+            <ul>
+                <li>Photos of homework and grade information are temporarily sent to Google's servers to generate teaching guides.</li>
+                <li>The transmitted data is used solely for the purpose of generating responses and is not used for training Google's models (in accordance with API Terms of Service).</li>
+                <li>Image data is not permanently stored on the servers.</li>
+            </ul>
+
+            <h2>Data Storage</h2>
+            <p>Grade level settings and question history are stored in the device's local storage. Uninstalling the App will also delete all data.</p>
+
+            <h2>Third-Party Sharing and Services</h2>
+            <p>The App does not provide, sell, or share any user data with third parties, except for the AI processing and advertising/payment infrastructures described above. You can find the privacy policies of the third-party service providers below:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: #FFD940; text-decoration: none;">Google Privacy Policy (AdMob / Gemini API)</a></li>
+                <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer" style="color: #FFD940; text-decoration: none;">Apple Privacy Policy (StoreKit)</a></li>
+            </ul>
+
+            <h2>Children's Privacy</h2>
+            <p>The App is designed for parents and guardians. It is not intended for direct use by children. However, since the App handles images of children's homework, please ensure that children's personal information (such as names or school names) is not included in the photos.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>This Privacy Policy may be updated as needed. Any changes will be posted on this page.</p>
+
+            <h2>Contact</h2>
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+            <p>Email: <a href="mailto:masaru.n.m2026@gmail.com" style="color: #FFD940; text-decoration: none;">masaru.n.m2026@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Shukudai Oshiete. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>
