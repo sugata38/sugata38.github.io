@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Claude.com Inspired - Warm Editorial Theme */
+    --bg-color: #F4F2EB;
+    --surface-color: #FFFFFF;
+    --surface-alt: #EFECE3;
+    --surface-border: rgba(36, 34, 32, 0.08);
+    --text-primary: #242220;
+    --text-secondary: #5C5955;
+    --accent-color: #D37753; /* Terracotta */
+    --accent-hover: #BF6846;
+    
+    /* Typography */
+    --font-heading: 'Noto Serif JP', 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', 'Noto Sans JP', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 12px rgba(36, 34, 32, 0.04);
+    --shadow-md: 0 12px 24px rgba(36, 34, 32, 0.06);
+    --shadow-lg: 0 24px 48px rgba(36, 34, 32, 0.08);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+/* Dark Mode Fallback (Optional, but let's keep it elegant dark) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1918;
+        --surface-color: #242220;
+        --surface-alt: #2a2826;
+        --surface-border: rgba(255, 255, 255, 0.08);
+        --text-primary: #f2f0eb;
+        --text-secondary: #a39f9b;
+        --accent-color: #D37753;
+        --accent-hover: #E38763;
+        --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+        --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.4);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide background glows from previous style */
+.bg-glow, .bg-glow-alt {
+    display: none;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+h1 { font-size: clamp(3rem, 6vw, 5rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; margin-bottom: var(--spacing-lg); }
+h3 { font-size: 1.5rem; margin-bottom: var(--spacing-xs); }
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(244, 242, 235, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--surface-border);
+    padding: var(--spacing-sm) 0;
+}
+@media (prefers-color-scheme: dark) {
+    header { background: rgba(26, 25, 24, 0.95); }
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Buttons - Solid Pill Shape */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 9999px; /* Pill */
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--text-primary);
+    color: var(--bg-color);
+}
+.btn-primary:hover {
+    background: var(--accent-color);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--surface-border);
+}
+.btn-secondary:hover {
+    border-color: var(--text-primary);
+    background: var(--surface-alt);
+}
+
+/* Hero */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    text-align: center;
+}
+.hero-content {
+    max-width: 800px;
+}
+.hero p {
+    font-size: 1.35rem;
+    max-width: 650px;
+    margin: var(--spacing-md) auto;
+}
+
+/* Sections */
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+/* Grid Layout */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Elegant Solid Card */
+.glass-card {
+    background: var(--surface-color);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.glass-card:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.app-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 22.5%;
+    border: 1px solid var(--surface-border);
+    margin-bottom: var(--spacing-sm);
+    object-fit: cover;
+}
+
+.app-desc {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+/* LP Specific Styles */
+.lp-hero {
+    min-height: 85vh;
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+.lp-grid {
+    display: grid;
+    /* Force columns to not exceed 1fr */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+/* Screenshot styling */
+.screenshot-container {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.screenshot-container img {
+    border-radius: 36px;
+    box-shadow: var(--shadow-lg);
+    border: 4px solid var(--text-primary);
+    width: 100%;
+    max-width: 320px; /* Cap width */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* If multiple images, let them share space and shrink slightly */
+.screenshot-container img:not(:only-child) {
+    max-width: 260px;
+}
+
+.screenshot-container img:hover {
+    transform: translateY(-8px);
+}
+
+/* Features List */
+.features-list {
+    margin: var(--spacing-md) 0;
+    list-style: none;
+}
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+.feature-icon {
+    color: var(--accent-color);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.store-badges {
+    margin-top: var(--spacing-md);
+}
+
+.legal-links {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    gap: 1.5rem;
+    border-top: 1px solid var(--surface-border);
+    padding-top: var(--spacing-sm);
+}
+.legal-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.legal-links a:hover {
+    color: var(--text-primary);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--surface-border);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpAnim 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+
+@keyframes fadeUpAnim {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    .lp-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .screenshot-container {
+        flex-direction: column; /* Stack multiple images on mobile */
+        gap: var(--spacing-lg);
+    }
+    .screenshot-container img, 
+    .screenshot-container img:not(:only-child) {
+        max-width: 280px; /* Reset max-width for mobile */
+    }
+    .features-list li {
+        text-align: left;
+    }
+    .legal-links {
+        justify-content: center;
+    }
+}
