@@ -119,20 +119,21 @@
         <div id="pp-japanese">
             <h1>プライバシーポリシー</h1>
             <p class="app-name">宿題おしえて</p>
-            <p class="updated">最終更新日: 2026年7月20日</p>
+            <p class="updated">最終更新日: 2026年8月23日</p>
 
             <h2>はじめに</h2>
             <p>宿題おしえて（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーは、本アプリにおけるデータの取り扱いについて説明します。</p>
-            <p>本アプリは、保護者が子供の宿題を教える際のサポートツールとして設計されています。</p>
+            <p>本アプリは、子どもが自分で宿題のヒントを見たり、保護者が教え方を確認したりするための学習サポートツールです。課金と広告の管理は保護者向けです。</p>
 
             <h2>収集・利用するデータ</h2>
             <p>本アプリは、不要な個人情報の収集は行いません。ただし、アプリの機能提供、品質向上、および広告配信のために以下のデータを一時的またはデバイス内に保存・送信する場合があります。</p>
             <ul>
-                <li><strong>宿題の画像データおよび学年設定：</strong>撮影した宿題の写真および設定された学年情報は、AI（Gemini API）による教え方ガイドを生成するためにAPIサーバー（shukudai-api.vercel.app）へ一時的に送信されます。送信されたデータはAI処理完了後に即時破棄され、サーバー上に保存されたり、モデルの学習に利用されたりすることはありません。</li>
-                <li><strong>デバイス識別子（IDFV）：</strong>サービスの安定運用（APIのレート制限管理）のため、Appleが提供するベンダー識別子（identifierForVendor）をリクエストヘッダーに含めて送信します。この識別子から個人を特定することはできません。</li>
+                <li><strong>宿題の画像データおよび学年設定：</strong>撮影した宿題の写真および設定された学年情報は、AI（Gemini API）によるヒント／教え方ガイドを生成するためにAPIサーバー（shukudai-api.vercel.app）へ一時的に送信されます。送信されたデータはAI処理完了後に即時破棄され、サーバー上に保存されたり、モデルの学習に利用されたりすることはありません。</li>
+                <li><strong>デバイス識別子（IDFV）：</strong>サービスの安定運用（APIのレート制限管理）および最低限の利用状況の把握のため、Appleが提供するベンダー識別子（identifierForVendor）を送信する場合があります。この識別子から個人を特定することはできません。</li>
+                <li><strong>利用イベント：</strong>起動、撮影開始、ヒント表示、課金画面の表示など、個人を特定しないイベント名をAPIサーバーへ送信し、サービスの品質改善に使います。氏名・メールアドレス・宿題の本文は送りません。</li>
                 <li><strong>利用履歴：</strong>過去の質問履歴および設定された学年情報は、お使いのデバイス内（ローカル）に保存されます。</li>
-                <li><strong>アプリ内課金（StoreKit）：</strong>プレミアムプランの購入処理および復元のために、Appleが提供するStoreKitを使用します。決済処理はすべてAppleを通じて安全に行われ、開発者がクレジットカード情報などの個人決済情報を収集・保持することはありません。</li>
-                <li><strong>広告配信（Google AdMob）：</strong>無料版において広告を表示するためにGoogle AdMobを使用しています。広告表示および最適化のために、匿名化された識別子やデバイス情報が利用される場合があります。</li>
+                <li><strong>アプリ内課金（StoreKit）：</strong>プレミアムプランの購入処理および復元のために、Appleが提供するStoreKitを使用します。決済処理はすべてAppleを通じて安全に行われ、開発者がクレジットカード情報などの個人決済情報を収集・保持することはありません。購入は保護者のApple ID（Face ID / パスコード）で行います。</li>
+                <li><strong>広告配信（Google AdMob）：</strong>無料版の設定画面にのみバナー広告を表示します。ホーム画面とヒント画面には広告を出しません。お子さまが使うアプリとして、パーソナライズ広告は使いません。広告識別子（IDFA）を使ったトラッキングは行いません。</li>
             </ul>
 
             <h2>AI（人工知能）の利用について</h2>
@@ -154,7 +155,8 @@
             </ul>
 
             <h2>お子様のプライバシー</h2>
-            <p>本アプリは保護者向けのアプリケーションです。お子様が直接使用することを想定していませんが、お子様の宿題の画像を扱うため、お子様の個人情報（名前、学校名など）が画像に含まれないようご注意ください。</p>
+            <p>本アプリは小学1年生から中学3年生の宿題を想定しています。子ども本人がヒントを見ながら使うことができます。課金と広告の設定は保護者の方にお願いします。</p>
+            <p>宿題の写真に、氏名・学校名・顔写真などの個人情報が写り込まないようご注意ください。広告は設定画面のみで、子ども向けの取り扱い（非パーソナライズ）として配信します。</p>
 
             <h2>プライバシーポリシーの変更</h2>
             <p>本プライバシーポリシーは、必要に応じて更新されることがあります。変更があった場合は、本ページにて通知します。</p>
@@ -171,20 +173,21 @@
         <div id="pp-english">
             <h1>Privacy Policy</h1>
             <p class="app-name">Shukudai Oshiete (Homework Helper)</p>
-            <p class="updated">Last updated: July 20, 2026</p>
+            <p class="updated">Last updated: August 23, 2026</p>
 
             <h2>Introduction</h2>
             <p>Shukudai Oshiete ("the App") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how the App handles your data.</p>
-            <p>The App is designed as a support tool for parents to help teach their children's homework.</p>
+            <p>The App helps children work through homework with step-by-step hints, and also lets parents view teaching tips. Purchases and ads are managed by parents or guardians.</p>
 
             <h2>Data Collection and Usage</h2>
             <p>The App respects your privacy. While we do not collect personal information, we use third-party services and temporary transmissions to provide app functionality, manage usage, and deliver advertisements.</p>
             <ul>
-                <li><strong>Homework Images and Grade Levels:</strong> Photos of homework and configured grade levels are transmitted to our API server (shukudai-api.vercel.app) to generate teaching guides via Gemini API. These data are discarded immediately after processing and are never stored on the server or used for training models.</li>
-                <li><strong>Device Identifier (IDFV):</strong> A device-specific identifier (identifierForVendor) is transmitted in the request header to enforce rate limits and ensure stable service. This identifier cannot identify individuals.</li>
+                <li><strong>Homework Images and Grade Levels:</strong> Photos of homework and configured grade levels are transmitted to our API server (shukudai-api.vercel.app) to generate hints or teaching guides via Gemini API. These data are discarded immediately after processing and are never stored on the server or used for training models.</li>
+                <li><strong>Device Identifier (IDFV):</strong> A device-specific identifier (identifierForVendor) may be sent to enforce rate limits and understand basic usage. This identifier cannot identify individuals.</li>
+                <li><strong>Usage Events:</strong> Non-identifying event names such as app open, capture start, hint shown, and paywall shown are sent to the API server to improve the service. We do not send names, email addresses, or the text of homework answers.</li>
                 <li><strong>Usage History:</strong> Past question history and configured grade levels are stored on your device (locally).</li>
-                <li><strong>In-App Purchases (StoreKit):</strong> We use Apple's StoreKit to process and restore premium plan purchases. All transactions are securely processed by Apple. The developer does not collect or store any payment information.</li>
-                <li><strong>Advertisements (Google AdMob):</strong> We use Google AdMob to display advertisements in the free version. Anonymous identifiers and device information may be used to display and optimize advertisements.</li>
+                <li><strong>In-App Purchases (StoreKit):</strong> We use Apple's StoreKit to process and restore premium plan purchases. All transactions are securely processed by Apple. The developer does not collect or store any payment information. Purchases require a parent or guardian's Apple ID (Face ID / passcode).</li>
+                <li><strong>Advertisements (Google AdMob):</strong> Banner ads appear only on the Settings screen for free users. Ads are not shown on the home or hint screens. Ads are treated as child-directed (non-personalized). We do not use IDFA tracking.</li>
             </ul>
 
             <h2>Use of AI (Artificial Intelligence)</h2>
@@ -206,7 +209,8 @@
             </ul>
 
             <h2>Children's Privacy</h2>
-            <p>The App is designed for parents and guardians. It is not intended for direct use by children. However, since the App handles images of children's homework, please ensure that children's personal information (such as names or school names) is not included in the photos.</p>
+            <p>The App is intended for homework from 1st grade elementary through 3rd year of junior high. Children may use the hint screens themselves. Parents or guardians should manage purchases and ad settings.</p>
+            <p>Please avoid photographing personal information such as names, school names, or faces. Ads appear only on Settings and are served as child-directed, non-personalized ads.</p>
 
             <h2>Changes to This Policy</h2>
             <p>This Privacy Policy may be updated as needed. Any changes will be posted on this page.</p>
