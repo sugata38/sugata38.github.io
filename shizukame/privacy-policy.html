@@ -121,7 +121,7 @@
         <div id="pp-japanese">
             <h1>プライバシーポリシー</h1>
             <p class="app-name">VideoSnap</p>
-            <p class="updated">最終更新日: 2026年8月22日</p>
+            <p class="updated">最終更新日: 2026年8月31日</p>
 
             <h2>はじめに</h2>
             <p>VideoSnap（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーは、本アプリにおけるデータの取り扱いについて説明します。</p>
@@ -129,12 +129,12 @@
             <h2>収集するデータ</h2>
             <p>本アプリは、ユーザーのプライバシーを尊重し、不要な個人情報の収集は行いません。ただし、アプリの機能提供、品質向上、および広告配信のために以下のデータを収集・利用する場合があります。</p>
             
-            <h3>1. カメラ・動画・スナップショット</h3>
-            <p>撮影したすべての動画および録画中に保存したスナップショット（静止画）は、お使いのデバイスの写真ライブラリに直接保存されます。メディアデータが外部サーバーへ送信されることは一切ありません。</p>
-            <p>スナップショットは、動画録画中にライブプレビューから1フレームを切り出して保存します（AVCaptureVideoDataOutput方式）。保存時には画面が一瞬白く光る視覚的フィードバックを表示します。</p>
+            <h3>1. カメラ・写真・動画・スナップショット</h3>
+            <p>撮影したすべての静止画（写真モード）、動画（動画モード）、および録画中に保存したスナップショット（静止画）は、お使いのデバイスの写真ライブラリに直接保存されます。メディアデータが外部サーバーへ送信されることは一切ありません。</p>
+            <p>本アプリには写真モードと動画モードがあります。写真モードではライブプレビューから1フレームを切り出して静止画を保存します（AVCaptureVideoDataOutput方式）。動画モードでは動画を録画し、録画中にスナップショット（静止画）も保存できます。保存時には画面が一瞬白く光る視覚的フィードバックを表示します。</p>
             
             <h3>2. マイク</h3>
-            <p>マイクは動画の音声録音のために使用されます。音声が動画の一部として録音され、デバイス内に保存されます。音声データが外部に送信されることはありません。</p>
+            <p>マイクは<strong>動画モード</strong>での音声録音のためにのみ使用されます。写真モードではマイクは使用しません。音声が動画の一部として録音され、デバイス内に保存されます。音声データが外部に送信されることはありません。</p>
 
             <h3>3. アプリ内課金（StoreKit）</h3>
             <p>Pro版（広告非表示および追加設定の解放）の購入処理および復元のために、Appleが提供するStoreKitを使用します。決済処理はすべてApple社を通じて安全に行われ、開発者がユーザーのクレジットカード情報などの個人決済情報を収集・保持することはありません。</p>
@@ -145,13 +145,13 @@
             <h2>カメラおよびマイクへのアクセス</h2>
             <p>本アプリは、以下の目的のためにデバイスへのアクセス権限を使用します：</p>
             <ul>
-                <li><strong>カメラ:</strong> リアルタイムのプレビュー表示、動画の録画、録画中スナップショットのため</li>
-                <li><strong>マイク:</strong> 動画の音声を録音するため</li>
-                <li><strong>写真ライブラリ:</strong> 撮影した動画・スナップショットの保存（追加）および、最新メディアのサムネイル表示（読み取り）のため</li>
+                <li><strong>カメラ:</strong> リアルタイムのプレビュー表示、写真モードでの静止画撮影、動画モードでの録画、録画中スナップショットのため</li>
+                <li><strong>マイク:</strong> 動画モードでの音声録音のため（写真モードでは未使用）</li>
+                <li><strong>写真ライブラリ:</strong> 撮影した写真・動画・スナップショットの保存（追加）および、最新メディアのサムネイル表示（読み取り）のため</li>
             </ul>
 
             <h2>データの保存</h2>
-            <p>動画・スナップショットはデバイスの写真ライブラリに保存されます。アプリの設定は UserDefaults に保存されます。アプリを削除すると、設定データはすべて削除されます。</p>
+            <p>写真・動画・スナップショットはデバイスの写真ライブラリに保存されます。アプリの設定は UserDefaults に保存されます。アプリを削除すると、設定データはすべて削除されます。</p>
 
             <h2>第三者への提供および外部サービス</h2>
             <p>本アプリで利用している外部のサービスプロバイダのプライバシーポリシーは、以下よりご確認いただけます。</p>
@@ -178,7 +178,7 @@
         <div id="english">
             <h1>Privacy Policy</h1>
             <p class="app-name">VideoSnap</p>
-            <p class="updated">Last updated: August 22, 2026</p>
+            <p class="updated">Last updated: August 31, 2026</p>
 
             <h2>Introduction</h2>
             <p>VideoSnap ("the App") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how the App handles your data.</p>
@@ -186,12 +186,12 @@
             <h2>Data Collection</h2>
             <p>The App respects your privacy. While we do not collect your personal data directly, we use third-party services for app functionality, quality improvement, and advertisement delivery, which may collect anonymous data.</p>
             
-            <h3>1. Camera, Videos, and Snapshots</h3>
-            <p>All recorded videos and snapshots (still images saved during recording) are saved directly to the device's Photos library. No media data is sent to external servers.</p>
-            <p>Snapshots are captured from a single frame of the live preview during video recording (AVCaptureVideoDataOutput). A brief white screen flash is shown as a visual indicator when saving.</p>
+            <h3>1. Camera, Photos, Videos, and Snapshots</h3>
+            <p>All still images captured in Photo mode, videos recorded in Video mode, and snapshots saved during recording are saved directly to the device's Photos library. No media data is sent to external servers.</p>
+            <p>The App provides separate Photo and Video modes. In Photo mode, still images are captured from a single frame of the live preview (AVCaptureVideoDataOutput). In Video mode, the App records movies and can save snapshot still images while recording continues. A brief white screen flash is shown as a visual indicator when saving.</p>
             
             <h3>2. Microphone</h3>
-            <p>The microphone is used to record audio as part of video recordings. Audio is saved locally. No audio data is transmitted externally.</p>
+            <p>The microphone is used <strong>only in Video mode</strong> to record audio as part of video recordings. The microphone is not used in Photo mode. Audio is saved locally. No audio data is transmitted externally.</p>
 
             <h3>3. In-App Purchases (StoreKit)</h3>
             <p>We use Apple's StoreKit to process and restore Pro plan purchases (ad removal and additional settings). All transactions are securely processed by Apple. The developer does not collect or store any payment information, such as credit card details.</p>
@@ -202,13 +202,13 @@
             <h2>Camera and Microphone Access</h2>
             <p>The App accesses these services for the following purposes:</p>
             <ul>
-                <li><strong>Camera:</strong> Used to provide real-time preview, record videos, and capture snapshots during recording</li>
-                <li><strong>Microphone:</strong> Used to record audio as part of video recordings</li>
-                <li><strong>Photos Library:</strong> Used to save recorded videos and snapshots (add access) and to display recent media thumbnails (read access)</li>
+                <li><strong>Camera:</strong> Used to provide real-time preview, capture still photos in Photo mode, record videos in Video mode, and capture snapshots during recording</li>
+                <li><strong>Microphone:</strong> Used to record audio in Video mode only (not used in Photo mode)</li>
+                <li><strong>Photos Library:</strong> Used to save captured photos, videos, and snapshots (add access) and to display recent media thumbnails (read access)</li>
             </ul>
 
             <h2>Data Storage</h2>
-            <p>Videos and snapshots are saved to the device's Photos library. App settings are stored in UserDefaults. All app data is deleted when the app is uninstalled.</p>
+            <p>Photos, videos, and snapshots are saved to the device's Photos library. App settings are stored in UserDefaults. All app data is deleted when the app is uninstalled.</p>
 
             <h2>Third-Party Services</h2>
             <p>You can find the privacy policies of the third-party service providers used by the App below:</p>
