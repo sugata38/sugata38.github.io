@@ -1,70 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ZoneCoach</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1, h2, h3 { color: #222; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - ZoneCoach</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
+    h1, h2, h3 { line-height: 1.3; }
+    a { color: #c45c16; }
+    .meta { color: #666; font-size: 0.9rem; }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p>ZoneCoach ("the App") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains what information the App collects and how it is handled.</p>
+  <h1>Privacy Policy</h1>
+  <p>ZoneCoach ("the App") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains what information the App collects and how it is handled.</p>
 
-    <h2>1. Information We Collect and How We Use It</h2>
-    <h3>1.1 Health Data</h3>
-    <p>The App integrates with Apple's HealthKit API on your device to access the following data:</p>
-    <ul>
-        <li><strong>Heart Rate Data (Read)</strong>: Used to determine your heart rate zone in real time during workouts and provide voice coaching.</li>
-        <li><strong>Workout Data (Write)</strong>: Used to save activity results such as session duration and calories burned to the Apple Health app at the end of a workout.</li>
-    </ul>
+  <h2>1. Information We Collect and How We Use It</h2>
 
-    <h3>1.2 Advertising and Tracking (ATT)</h3>
-    <p>The App uses Google AdMob to display advertisements. If you grant permission via iOS App Tracking Transparency (ATT), the App may access your device's advertising identifier (IDFA) to deliver personalized ads.</p>
-    <p>For more information on how Google handles privacy in advertising, please refer to:</p>
-    <ul>
-        <li><a href="https://policies.google.com/privacy?hl=en" target="_blank">Google Privacy Policy</a></li>
-        <li><a href="https://policies.google.com/technologies/ads?hl=en" target="_blank">How Google uses data in advertising</a></li>
-    </ul>
+  <h3>1.1 Health Data (HealthKit)</h3>
+  <p>The App integrates with Apple’s HealthKit API on your device to access the following data.</p>
+  <p><strong>Read</strong></p>
+  <ul>
+    <li><strong>Heart rate</strong>: Used to determine your heart-rate zone in real time during workouts and provide voice coaching.</li>
+    <li><strong>Date of birth, biological sex, and body mass</strong>: Used for profile-based calculations such as zone estimates and calorie estimates.</li>
+  </ul>
+  <p><strong>Write (iPhone is the system of record)</strong></p>
+  <ul>
+    <li><strong>Workouts</strong>: Saves session results such as duration to the Health app.</li>
+    <li><strong>Heart-rate samples</strong>: Saves measured heart-rate samples to Health.</li>
+    <li><strong>Active energy (calories)</strong>: Saves estimated active energy to Health.</li>
+  </ul>
+  <p>The Apple Watch companion reads heart rate from the optical sensor and relays it to iPhone. It does <strong>not</strong> finalize/save the workout record to Health; the iPhone app performs Health writes.</p>
 
-    <h2>2. Handling of HealthKit Data (Important)</h2>
-    <p>In accordance with Apple's strict review guidelines, all health data obtained from HealthKit by the App is fully and securely protected under the following rules:</p>
-    <ul>
-        <li><strong>Local Processing Only</strong>: All heart rate and health data collected by the App is <strong>processed entirely on your device (iPhone and Apple Watch)</strong>. It is never transmitted to external servers, nor is it stored in any way accessible to the developer.</li>
-        <li><strong>No Sharing with Third Parties</strong>: Health data collected through HealthKit is <strong>never sold, shared, disclosed, or transferred to any third party</strong>, including advertising networks, data brokers, and information resellers.</li>
-        <li><strong>No Use for Advertising</strong>: Health data collected through HealthKit is never used for targeted advertising or user profiling purposes.</li>
-    </ul>
+  <h3>1.2 Bluetooth Heart Rate Monitors</h3>
+  <p>The App uses Bluetooth to receive heart rate from compatible BLE heart-rate monitors. This data is processed only on your device and is not sent to external servers.</p>
 
-    <h2>3. In-App Purchases</h2>
-    <p>In-app purchases are processed securely through Apple's StoreKit system. Your credit card information and personal billing details are managed solely by Apple. The developer does not directly collect or store this payment information.</p>
+  <h3>1.3 Apple Watch Connectivity</h3>
+  <p>The App uses Watch Connectivity and HealthKit’s Watch launch APIs to receive heart rate from ZoneCoach on Apple Watch. Health data obtained via Watch is processed only on-device and is not transmitted externally.</p>
 
-    <h2>4. Other Data</h2>
-    <p>For the purpose of improving app quality and fixing bugs, the App may receive anonymous crash reports (error information generated when the app unexpectedly terminates) provided by Apple. These reports do not contain any personally identifiable information.</p>
+  <h3>1.4 On-Device Workout History</h3>
+  <p>As a premium feature, summaries of completed workouts may be stored locally in the App on your device. This history is not sent to external servers.</p>
 
-    <h2>5. Changing Permissions</h2>
-    <p>You can manage your permissions at any time through your iPhone settings:</p>
-    <ul>
-        <li><strong>Health Data</strong>: Go to <strong>Settings &gt; Health &gt; Data Access & Devices</strong>.</li>
-        <li><strong>Tracking (Ads)</strong>: Go to <strong>Settings &gt; Privacy & Security &gt; Tracking</strong> to manage tracking permissions for the App.</li>
-    </ul>
+  <h3>1.5 Background Modes</h3>
+  <ul>
+    <li><strong>audio</strong>: Deliver voice alerts while the screen is locked.</li>
+    <li><strong>bluetooth-central</strong>: Maintain connections to BLE heart-rate monitors.</li>
+    <li><strong>workout-processing</strong> (Watch): Continue heart-rate measurement during a workout.</li>
+  </ul>
 
-    <h2>6. Changes to This Privacy Policy</h2>
-    <p>The contents of this policy may be changed without prior notice as needed. Any changes to this Privacy Policy will take effect upon publication on this page.</p>
+  <h3>1.6 Advertising and Tracking (ATT)</h3>
+  <p>The App uses Google AdMob to display advertisements for free users. If you grant permission via iOS App Tracking Transparency (ATT), the App may access your device’s advertising identifier (IDFA) to deliver personalized ads.</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+    <li><a href="https://policies.google.com/technologies/ads">How Google uses data in advertising</a></li>
+  </ul>
 
-    <h2>7. Contact Us</h2>
-    <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
-    <ul>
-        <li>Developer: Masaru Miyake</li>
-        <li>Email: masaru.n.m2026@gmail.com</li>
-    </ul>
+  <h2>2. Handling of HealthKit Data (Important)</h2>
+  <ul>
+    <li><strong>Local processing only</strong>: Heart rate and other health data are processed entirely on your device (iPhone and Apple Watch).</li>
+    <li><strong>No sharing with third parties</strong>: Health data is never sold, shared, disclosed, or transferred to any third party.</li>
+    <li><strong>No use for advertising</strong>: Health data is never used for targeted advertising or user profiling.</li>
+  </ul>
 
-    <hr>
-    <p>Effective Date: April 10, 2026<br>Last Updated: July 20, 2026</p>
+  <h2>3. In-App Purchases</h2>
+  <p>In-app purchases are processed through Apple’s StoreKit system. Payment details are managed solely by Apple.</p>
 
-    <p><a href="./privacy-policy.html">日本語版 (Japanese Version)</a></p>
+  <h2>4. Other Data</h2>
+  <p>The App may receive anonymous crash reports provided by Apple. These do not contain personally identifiable information.</p>
+
+  <h2>5. Changing Permissions</h2>
+  <ul>
+    <li><strong>Health</strong>: Settings &gt; Health &gt; Data Access &amp; Devices</li>
+    <li><strong>Bluetooth</strong>: Settings &gt; Privacy &amp; Security &gt; Bluetooth</li>
+    <li><strong>Tracking (ads)</strong>: Settings &gt; Privacy &amp; Security &gt; Tracking</li>
+  </ul>
+
+  <h2>6. Changes to This Privacy Policy</h2>
+  <p>This policy may be changed without prior notice as needed. Changes take effect when published on this page.</p>
+
+  <h2>7. Contact Us</h2>
+  <ul>
+    <li>Developer: Masaru Miyake</li>
+    <li>Email: masaru.n.m2026@gmail.com</li>
+  </ul>
+
+  <p class="meta">Effective Date: April 10, 2026<br />Last Updated: August 23, 2026</p>
+  <p><a href="privacy-policy.html">日本語版 (Japanese Version)</a></p>
 </body>
 </html>
